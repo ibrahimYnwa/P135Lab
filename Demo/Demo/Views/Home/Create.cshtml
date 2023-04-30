@@ -1,0 +1,27 @@
+﻿@model Book
+@{
+    ViewData["Title"] = "Create";
+}
+<form method="post">
+  <div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name"  class="form-control">
+  </div>
+   <div class="form-group">
+    <label asp-for="Price"></label>
+    <input asp-for="Price" class="form-control">
+  </div>
+  <div class="form-group">
+    <label asp-for="Authorİds" ></label>
+    <select asp-for="Authorİds" class="form-control" asp-items="@ViewBag.Authors">
+    </select>
+     </div>
+      <div class="form-group">
+    <label asp-for="GenresIds" ></label>
+     <select asp-for="GenresIds" class="form-control" asp-items="@ViewBag.Genres">
+    </select>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
